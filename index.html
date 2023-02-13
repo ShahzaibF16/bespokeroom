@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBeSpoke</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        $(document).ready(function () {
+            $('#dropDown').click(function () {
+                $('.drop-down_drop').toggleClass('drop-down--active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 80px;">
+        <div class="container-fluid justify-content-between">
+            <!-- Left elements -->
+            <div class="d-flex">
+                <!-- Brand -->
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                    <img src="./images/ham.png" height="20" alt="menu" loading="lazy" style="margin-top: 2px;" />
+                </a>
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                    <img src="./images/logo.PNG" height="40" alt="logo" loading="lazy" style="margin-top: 2px;" />
+                </a>
+
+                <!-- Search form -->
+                <!-- <form class="input-group w-auto my-auto d-none d-sm-flex">
+                    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search"
+                        style="min-width: 125px;" />
+                    <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
+                </form> -->
+            </div>
+            <!-- Left elements -->
+
+            <!-- Center elements -->
+            <ul class="navbar-nav flex-row d-none d-md-flex  justify-content-center"
+                style="align-items: center;justify-content: center;">
+
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <button style="display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                      padding: 18px 24px;
+                      gap: 15px;
+                      width: 189px;
+                      height: 33px;
+                      background: #FFBD59;
+                      border: none;
+                      border-radius: 6px; 
+                      font-weight: bolder;
+                      margin-right: 120px;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                      
+                      ">I'm In - Get Started</button>
+                        <!-- <span><i class="fas fa-video fa-lg"></i></span> -->
+                    </a>
+                </li>
+
+
+            </ul>
+            <!-- Center elements -->
+
+            <!-- Right elements -->
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                        <img src="./images/ICO-01.png" class="rounded-circle" style="width: 25px;
+                                height: 25px; margin-right: 10px;" alt="shop" loading="lazy" />
+
+                        <strong class="d-none d-sm-block ms-1"><button style="width: 75px;
+                            height: 41px;
+                            font-weight: 600;
+                            border: 1px solid #142640;
+                            background-color: transparent;
+                            border-radius: 6px;">LOGIN</button></strong>
+                    </a>
+                </li>
+            </ul>
+            <!-- Right elements -->
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <header>
+        <!-- Background image -->
+        <div class="p-5 text-center bg-image" style="
+        background-image: url('./images/back.png');
+        height: 100vh;
+      ">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.016);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white container-fluid">
+                        <h1 class="mb-3 headings1" style="">Transform your Home
+                            <br />Beautiful interiors by Expert Designers
+                        </h1>
+                        <style>
+
+                        </style>
+                        <h2 style="" class="headings2">
+                            Personalised online designs from £395
+                        </h2>
+                        <br />
+                        <h4 class="mb-3 mt-5 heading4" style="">Get your fixed price and info on our service</h4>
+                        
+                        <!-- Select Dropdown -->
+                        <div class="btn-container container-fluid">
+                            <div class="table_center">
+                                <div class="drop-down_drop">
+                                    <div id="dropDown" onclick="toggleClass()" class="drop-down__button">
+                                        <span><i class="fa fa-search"></i></span>
+                                        <span class="drop-down__name">I need help with my...</span>
+                                        <span class="drop-down__icon clb"><i class="fa-solid fa-angle-down"></i></span>
+                                    </div>
+                                    <div class="drop-down__menu-box" data-mdb-backdrop="true">
+                                        <ul class="drop-down__menu" data-mdb-backdrop="true">
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Living Room<span
+                                                    class="drop-down__icon">£495</span></li>
+                                            <li data-name="profile" class="drop-down__item">Kitchen<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bathroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                            <li data-name="profile" class="drop-down__item">Bedroom<span
+                                                    class="drop-down__icon">£395</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <button class="buttonSearch">FIND OUT MORE</button>
+                            </div>
+                        </div>
+                        <!-- Select Dropdown -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background image -->
+    </header>
+    <br />
+    <br />
+    <br />
+
+    <!-- Slider -->
+    <div class="container">
+        <div class="row p-2">
+            <h2>Fixed price design from just £395 per room</h2>
+            <h4>Receive a £100 shopping voucher per room, when you book today!</h4>
+        </div>
+        <div class="row mb-5 container-fluid">
+            <div class="MultiCarousel" data-items="1,3,5,3" data-slide="1" id="MultiCarousel" data-interval="1000">
+                <div class="MultiCarousel-inner">
+                    <div class="item">
+                        <div class="pad15">
+                            <img class="lead img-fluid" src="./images/Rectangle 38.png" alt="">
+                            <p class="">Bedroom Design | £395</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img class="lead img-fluid" src="./images/Rectangle 39.png" alt="">
+                            <p>Living Room Design | £450</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img class="lead img-fluid" src="./images/Rectangle 40.png" alt="">
+                            <p>Kitchen + Dining Design | £495</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary leftLst"><</button>
+                   
+                <button class="btn btn-primary rightLst">></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- MDB -->
+<script src="./app.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script> -->
+
+
+</html>
